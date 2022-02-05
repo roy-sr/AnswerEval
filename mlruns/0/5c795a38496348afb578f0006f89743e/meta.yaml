@@ -1,0 +1,15 @@
+artifact_uri: file:///home/srijan/p8/interviewAssesment/mlruns/0/5c795a38496348afb578f0006f89743e/artifacts
+end_time: 1642169589371
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+name: ''
+run_id: 5c795a38496348afb578f0006f89743e
+run_uuid: 5c795a38496348afb578f0006f89743e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1642169575687
+status: 3
+tags: []
+user_id: srijan
