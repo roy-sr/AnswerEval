@@ -26,14 +26,6 @@ class ApiInterface:
                             }, data=data, headers={'Connection': 'close'})
         
         return json.loads(resp.text)
-    
-    
-    def get_google_cookies(self):
-
-        response = requests.get('https://google.com')
-        if response.status_code == 200:
-            return response.cookies.get_dict()
-        return None
             
             
             

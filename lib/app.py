@@ -282,6 +282,9 @@ class App(object):
     def get_content_words_context_score(self, refAnstext, content_index, content_words_lemma , \
                                         tfidfVariantOut, synonyms_dict=None, max_article_text_freq= None, min_article_text_freq = None):
         
+        """
+            This function calculates the context score of the content word w.r.t the sentence using cosine similarity
+        """
         sent_tokenize = nltk.sent_tokenize(refAnstext)
         
         # Get synonyms of ref content words
@@ -446,13 +449,17 @@ class App(object):
         
         
         # out                                
-        sim_keyword_score , sim_keyword_F1 =  self.get_keyword_sim_index(' '.join(candAns_all_words), candAnstext )
-        sim_keyword_score = round(sim_keyword_score, 2)
+        # sim_keyword_score , sim_keyword_F1 =  self.get_keyword_sim_index(' '.join(candAns_all_words), candAnstext )
+        # sim_keyword_score = round(sim_keyword_score, 2)
         # print('sim_keyword_score : ', sim_keyword_score)
         # self.temp.append('sim_keyword_score')
         # self.temp.append(sim_keyword_score)
         # print('sim_keyword_F1 : ', sim_keyword_F1)
         #----------------------------------------------------------------------------------------------#
+        
+        
+        ### Weighted Recall
+        
         ref_word_coverage = 0
         ref_word_coverage_list = [0]
         cand_word_coverage = 0
